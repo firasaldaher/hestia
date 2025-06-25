@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HESTIA by Reina | Luxury Tanning Oil</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Premium tanning oil by HESTIA by Reina. Get the perfect sun-kissed glow with our luxurious formula.">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Montserrat:300,400,700"> 
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+      :root {
+        --primary-color: #D4AF37; /* ذهبي */
+        --secondary-color: #000000; /* أسود */
+        --light-color: #F8F8F8;
+        --dark-color: #111111;
+      }
+      
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: var(--dark-color);
+        color: var(--light-color);
+        overflow-x: hidden;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-color);
+      }
+      
+      /* Navbar Styles */
+      .site-navbar {
+        background-color: rgba(0, 0, 0, 0.9) !important;
+        border-bottom: 1px solid var(--primary-color);
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+      }
+      
+      .site-navbar.scrolled {
+        background-color: rgba(0, 0, 0, 0.95) !important;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        box-shadow: 0 2px 10px rgba(212, 175, 55, 0.1);
+      }
+      
+      .site-logo a {
+        color: var(--primary-color) !important;
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+      }
+      
+      .site-logo a:hover {
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+      }
+      
+      .site-menu > li > a {
+        color: var(--light-color) !important;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+      
+      .site-menu > li > a:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+      }
+      
+      .site-menu > li > a:hover {
+        color: var(--primary-color) !important;
+      }
+      
+      .site-menu > li > a:hover:after {
+        width: 100%;
+      }
+      
+      /* Button Styles */
+      .btn-black {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        border: 2px solid var(--primary-color);
+        font-weight: 600;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        transition: all 0.3s ease;
+      }
+      
+      .btn-black:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--secondary-color);
+        transition: all 0.3s ease;
+        z-index: -1;
+      }
+      
+      .btn-black:hover {
+        color: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+      }
+      
+      .btn-black:hover:before {
+        left: 0;
+      }
+      
+      /* Product Item Styles */
+      .product-item {
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .product-item:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+      .product-item:hover {
+        border-color: var(--primary-color);
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+      
+      .product-item:hover:before {
+        opacity: 1;
+      }
+      
+      /* Hero Section */
+      .site-blocks-cover {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/beach-background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+      
+      .site-block-cover-content {
+        position: relative;
+        z-index: 2;
+      }
+      
+      .site-block-cover-content h1 {
+        font-size: 4rem;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        animation: fadeInUp 1s ease;
+      }
+      
+      .site-block-cover-content .sub-title {
+        display: inline-block;
+        padding: 5px 15px;
+        background-color: rgba(212, 175, 55, 0.2);
+        border-left: 3px solid var(--primary-color);
+        animation: fadeIn 1.5s ease;
+      }
+      
+      /* Footer Styles */
+      .site-footer {
+        background-color: var(--secondary-color);
+        border-top: 1px solid var(--primary-color);
+        position: relative;
+      }
+      
+      .site-footer:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+      }
+      
+      .footer-heading {
+        color: var(--primary-color);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        padding-bottom: 10px;
+        position: relative;
+      }
+      
+      .footer-heading:after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background-color: var(--primary-color);
+      }
+      
+      /* Gallery Section */
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s ease;
+      }
+      
+      .gallery-item img {
+        transition: transform 0.5s ease;
+      }
+      
+      .gallery-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+      }
+      
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+      
+      .gallery-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        display: flex;
+        align-items: flex-end;
+        padding: 20px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+      
+      /* Pulse Animation */
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+      
+      .pulse {
+        animation: pulse 2s infinite;
+      }
+      
+      /* Mobile menu adjustments */
+      @media (max-width: 991.98px) {
+        .site-menu {
+          background-color: var(--secondary-color);
+        }
+        
+        .site-block-cover-content h1 {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+  
+  <div class="site-wrap">
+    <div class="site-navbar py-2" id="navbar">
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search products...">
+          </form>  
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="index.html" class="js-logo-clone">HESTIA by Reina</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Our Product</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="benefits.html">Benefits</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="icons">
+            <a href="https://www.instagram.com/hestia.lb/" target="_blank" class="icons-btn d-inline-block"><span class="icon-instagram"></span></a>
+            <a href="https://api.whatsapp.com/send?phone=96171444895" class="icons-btn d-inline-block"><span class="icon-whatsapp"></span></a>
+            <a href="cart.html" class="icons-btn d-inline-block bag pulse">
+              <span class="icon-shopping-bag"></span>
+              <span class="number">0</span>
+            </a>
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-blocks-cover" data-aos="fade">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto order-md-2 align-self-start">
+            <div class="site-block-cover-content">
+              <h2 class="sub-title">#LuxuryTanning</h2>
+              <h1 class="mb-4">Premium Tanning Oil</h1>
+              <p class="mb-5">Achieve the perfect sun-kissed glow with our luxurious formula enriched with natural ingredients.</p>
+              <p><a href="shop.html" class="btn btn-black rounded-0">Shop Now</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 order-1 align-self-end">
+            <img src="images/hestia-product.png" alt="HESTIA Tanning Oil" class="img-fluid animate__animated animate__fadeInRight">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Gallery Section -->
+    <div class="site-section bg-dark pt-5 pb-0">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center">
+            <h2 class="text-primary mb-4">#HESTIAGlow</h2>
+            <p class="lead">See the results for yourself</p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-md-4 col-lg-4">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Tan result 1" class="img-fluid">
+              <div class="gallery-overlay">
+                <div>
+                  <h3 class="text-white">Perfect Summer Glow</h3>
+                  <p class="text-white">After 3 days using HESTIA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Tan result 2" class="img-fluid">
+              <div class="gallery-overlay">
+                <div>
+                  <h3 class="text-white">Natural Looking Tan</h3>
+                  <p class="text-white">No streaks, no patches</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Tan result 3" class="img-fluid">
+              <div class="gallery-overlay">
+                <div>
+                  <h3 class="text-white">Luxurious Experience</h3>
+                  <p class="text-white">Feel the difference</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="title-section mb-5 text-center" data-aos="fade-up">
+          <h2 class="text-uppercase"><span class="d-block">Discover</span> The Benefits</h2>
+          <p class="lead">Why HESTIA stands out from the rest</p>
+        </div>
+        <div class="row align-items-stretch">
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-item sm-height full-height bg-gray text-center p-4">
+              <span class="icon-star2 display-3 text-primary mb-4 d-block"></span>
+              <h3 class="text-primary">Deep Hydration</h3>
+              <p>Our formula provides intense moisture to keep your skin nourished while tanning.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-item sm-height full-height bg-gray text-center p-4">
+              <span class="icon-leaf display-3 text-primary mb-4 d-block"></span>
+              <h3 class="text-primary">Natural Ingredients</h3>
+              <p>Enriched with coconut oil, carrot extract, and vitamin E for a healthy glow.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="product-item sm-height full-height bg-gray text-center p-4">
+              <span class="icon-sun-o display-3 text-primary mb-4 d-block"></span>
+              <h3 class="text-primary">Even Tan</h3>
+              <p>Helps achieve a streak-free, even tan without patchiness.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating CTA Section -->
+    <div class="site-section bg-primary py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8 mb-4 mb-md-0">
+            <h3 class="text-white mb-0">Ready to get your perfect tan?</h3>
+            <p class="mb-0 text-white-50">Limited stock available</p>
+          </div>
+          <div class="col-md-4 text-center text-md-right">
+            <a href="shop.html" class="btn btn-black rounded-0 btn-lg">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="title-section mb-5 col-12" data-aos="fade-up">
+            <h2 class="text-uppercase">Our Product</h2>
+            <p class="lead">The secret to a perfect sun-kissed glow</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="product-item md-height bg-gray d-block mb-4">
+              <img src="images/hestia-product-closeup.jpg" alt="HESTIA Tanning Oil" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <h2 class="item-title">HESTIA Premium Tanning Oil</h2>
+            <p class="mb-4">Our signature tanning oil is formulated to enhance your natural tan while providing superior skin hydration. The luxurious blend of natural oils absorbs quickly without leaving a greasy residue.</p>
+            
+            <div class="mb-4">
+              <h4 class="text-primary">Key Features:</h4>
+              <ul class="list-unstyled">
+                <li class="mb-2"><span class="icon-check text-primary mr-2"></span> Accelerates tanning process</li>
+                <li class="mb-2"><span class="icon-check text-primary mr-2"></span> Deeply moisturizes skin</li>
+                <li class="mb-2"><span class="icon-check text-primary mr-2"></span> Non-greasy formula</li>
+                <li class="mb-2"><span class="icon-check text-primary mr-2"></span> Pleasant tropical scent</li>
+                <li class="mb-2"><span class="icon-check text-primary mr-2"></span> 100ml bottle with elegant gold detailing</li>
+              </ul>
+            </div>
+            
+            <div class="d-flex align-items-center mb-4">
+              <strong class="item-price display-4 mr-4">$28.00</strong>
+              <div class="star-rating">
+                <span class="icon-star2 text-warning"></span>
+                <span class="icon-star2 text-warning"></span>
+                <span class="icon-star2 text-warning"></span>
+                <span class="icon-star2 text-warning"></span>
+                <span class="icon-star2 text-warning"></span>
+                <span class="ml-2">(24 reviews)</span>
+              </div>
+            </div>
+            
+            <p><a href="cart.html" class="btn btn-black rounded-0 mr-3">Add to Cart</a>
+            <a href="shop.html" class="btn btn-outline-primary rounded-0">Learn More</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="title-section text-center mb-5 col-12" data-aos="fade-up">
+            <h2 class="text-uppercase">Customer Reviews</h2>
+            <p class="lead text-white-50">What our customers say about us</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 block-3" data-aos="fade-up">
+            <div class="nonloop-block-3 owl-carousel">
+              <div class="item">
+                <div class="item-entry p-4 bg-gray">
+                  <div class="star-rating mb-3">
+                    <span class="icon-star2 text-warning"></span>
+                    <span class="icon-star2 text-warning"></span>
+                    <span class="icon-star2 text-warning"></span>
+                    <span class="icon-star2 text-warning"></span>
+                    <span class="icon-star2 text-warning"></span>
+                  </div>
+                  <blockquote class="mb-4">
+                    "The best tanning oil I've ever used! I got the perfect golden tan in just two days at the beach. The smell is amazing and it kept my skin so soft."
+                  </blockquote>
+                  <cite class="text-primary">- Sarah T.</cite>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-entry p-4 bg-gray">
+                  <div class="star-rating mb-3">
+                    <span class="icon-star2 text-warning"></span>
+                    <span class="icon-star2 text-warning"></span>
+                    <span class="icon-star2 text-warning"></span>
+                    <span class="icon-star2 text-warning"></span>
+                    <span class="icon-star2 text-warning"></span>
+                  </div>
+                  <blockquote class="mb-4">
+                    "I love how this oil gives me an even tan without any streaks. The bottle looks so luxurious on my vanity too. Worth every penny!"
+                  </blockquote>
+                  <cite class="text-primary">- Maya N.</cite>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-entry p-4 bg-gray">
+                  <div class="star-rating mb-3">
+                    <span class="icon-star2 text-warning"></span>
+                    <span class="icon-star2 text-warning"></span>
+                    <span class="icon-star2 text-warning"></span>
+                    <span class="icon-star2 text-warning"></span>
+                    <span class="icon-star2 text-warning"></span>
+                  </div>
+                  <blockquote class="mb-4">
+                    "As someone with dry skin, this oil has been a game changer. I get a beautiful tan while my skin feels nourished. The gold packaging is stunning!"
+                  </blockquote>
+                  <cite class="text-primary">- Jessica L.</cite>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-blocks-cover inner-page py-5" data-aos="fade">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto order-md-2 align-self-start">
+            <div class="site-block-cover-content">
+              <h2 class="sub-title">#SummerGlow</h2>
+              <h1 class="mb-4">Get Ready For Summer</h1>
+              <p class="mb-5">Order now and get your perfect tan before the season starts!</p>
+              <p><a href="shop.html" class="btn btn-black rounded-0">Shop Now</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 order-1 align-self-end">
+            <img src="images/beach-woman.jpg" alt="Woman with perfect tan" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up">
+            <h3 class="footer-heading mb-4">About HESTIA</h3>
+            <p>Premium tanning products crafted with care in Lebanon. Our mission is to help you achieve the perfect sun-kissed glow while keeping your skin healthy and hydrated.</p>
+            <div class="mt-4">
+              <a href="https://www.instagram.com/hestia.lb/" target="_blank" class="pl-0 pr-3 text-primary"><span class="icon-instagram"></span></a>
+              <a href="https://api.whatsapp.com/send?phone=96171444895" class="pl-3 pr-3 text-primary"><span class="icon-whatsapp"></span></a>
+              <a href="#" class="pl-3 pr-3 text-primary"><span class="icon-facebook"></span></a>
+            </div>
+          </div>
+          <div class="col-lg-5 ml-auto mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="footer-heading mb-4">Quick Links</h3>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <ul class="list-unstyled">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="shop.html">Our Product</a></li>
+                  <li><a href="benefits.html">Benefits</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <ul class="list-unstyled">
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="#">Shipping Policy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="block-5 mb-5">
+              <h3 class="footer-heading mb-4">Contact Info</h3>
+              <ul class="list-unstyled">
+                <li class="address">Beirut, Lebanon</li>
+                <li class="phone"><a href="tel://+96171444895">+961 71 444 895</a></li>
+                <li class="email">info@hestialb.com</li>
+              </ul>
+            </div>
+
+            <div class="block-7">
+              <form action="#" method="post">
+                <label for="email_subscribe" class="footer-heading">Subscribe</label>
+                <p class="mb-3">Get updates on special offers</p>
+                <div class="form-group">
+                  <input type="text" class="form-control py-4" id="email_subscribe" placeholder="Email">
+                  <input type="submit" class="btn btn-sm btn-primary" value="Send">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <p>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | HESTIA by Reina
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/main.js"></script>
+  
+  <script>
+    // Navbar scroll effect
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 100) {
+        $('.site-navbar').addClass('scrolled');
+      } else {
+        $('.site-navbar').removeClass('scrolled');
+      }
+    });
+    
+    // Initialize AOS animations
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+    
+    // Smooth scrolling for anchor links
+    $('a[href*="#"]').on('click', function(e) {
+      e.preventDefault();
+      
+      $('html, body').animate(
+        {
+          scrollTop: $($(this).attr('href')).offset().top,
+        },
+        500,
+        'linear'
+      );
+    });
+    
+    // Product hover effect
+    $('.product-item').hover(
+      function() {
+        $(this).find('img').css('transform', 'scale(1.05)');
+      },
+      function() {
+        $(this).find('img').css('transform', 'scale(1)');
+      }
+    );
+  </script>
+    
+  </body>
+</html>
